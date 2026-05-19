@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz om Datasikkerhet</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background-color:#0f172a;
+    color:white;
+}
+
+header{
+    background-color:#020617;
+    padding:20px;
+    text-align:center;
+    border-bottom:2px solid #38bdf8;
+}
+
+header h1{
+    color:#38bdf8;
+    margin:0;
+}
+
+nav{
+    margin-top:10px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:15px;
+}
+
+nav a:hover{
+    color:#38bdf8;
+}
+
+.container{
+    width:90%;
+    max-width:900px;
+    margin:auto;
+    padding:40px 0;
+}
+
+.card{
+    background-color:#020617;
+    padding:25px;
+    border-radius:10px;
+    margin-bottom:25px;
+}
+
+.card h2{
+    color:#38bdf8;
+}
+
+button{
+    background-color:#38bdf8;
+    color:black;
+    border:none;
+    padding:10px 15px;
+    border-radius:8px;
+    cursor:pointer;
+    margin-top:15px;
+}
+
+button:hover{
+    background-color:#0ea5e9;
+}
+
+.result{
+    margin-top:20px;
+    font-weight:bold;
+    color:#38bdf8;
+}
+
+footer{
+    background-color:#020617;
+    text-align:center;
+    padding:25px;
+    margin-top:40px;
+    border-top:2px solid #38bdf8;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1>Quiz om Datasikkerhet</h1>
+
+<nav>
+<a href="index.html">Hjem</a>
+<a href="Informasjon.html">Informasjon</a>
+<a href="phishing.html">Phishing</a>
+<a href="quiz.html">Quiz</a>
+</nav>
+
+</header>
+
+<div class="container">
+
+<div class="card">
+
+<h2>1. Hva er et sterkt passord?</h2>
+
+<input type="radio" name="q1"> 123456<br>
+<input type="radio" name="q1" id="correct1"> Et langt passord med tall og symboler<br>
+<input type="radio" name="q1"> navn123<br>
+
+</div>
+
+<div class="card">
+
+<h2>2. Hva bør du gjøre for å beskytte kontoene dine?</h2>
+
+<input type="radio" name="q2" id="correct2"> Bruke to-faktorautentisering<br>
+<input type="radio" name="q2"> Dele passord med venner<br>
+<input type="radio" name="q2"> Bruke samme passord overalt<br>
+
+</div>
+
+<div class="card">
+
+<h2>3. Hvorfor er oppdateringer viktige?</h2>
+
+<input type="radio" name="q3"> For å gjøre mobilen tregere<br>
+<input type="radio" name="q3" id="correct3"> For å fikse sikkerhetshull<br>
+<input type="radio" name="q3"> For å slette filer<br>
+
+</div>
+
+<button onclick="checkQuiz()">Sjekk svar</button>
+
+<p class="result" id="result"></p>
+
+</div>
+
+<footer>
+
+<p>
+Roshana Vakeesan – 1IMC – 28.04.2026 | Tema: Datasikkerhet
+</p>
+
+</footer>
+
+<script>
+
+function checkQuiz(){
+
+let score = 0;
+
+if(document.getElementById("correct1").checked){
+    score++;
+}
+
+if(document.getElementById("correct2").checked){
+    score++;
+}
+
+if(document.getElementById("correct3").checked){
+    score++;
+}
+
+document.getElementById("result").innerHTML =
+"Du fikk " + score + " av 3 riktige!";
+
+}
+
+</script>
+
+</body>
+</html>
